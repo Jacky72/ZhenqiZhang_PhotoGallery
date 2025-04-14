@@ -1,2 +1,2 @@
 # ZhenqiZhang_PhotoGallery
- A Web Project for learning web development and sharing my travel memories
+ A Web Project for learning Web Development and Sharing my Travel Memories
