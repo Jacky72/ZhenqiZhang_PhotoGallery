@@ -1,73 +1,84 @@
 import React from 'react'
 import Image from "next/image";
-import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-
-const pictureData = [
-    {
-        img: '/image/welcome.jpg',
-        title: 'pic1',
-    },
-    {
-        img: '/image/welcome.jpg',
-        title: 'pic2',
-    },
-    {
-        img: '/image/welcome.jpg',
-        title: 'pic3',
-    },
-    {
-        img: '/image/welcome.jpg',
-        title: 'pic4',
-    },
-    {
-        img: '/image/welcome.jpg',
-        title: 'pic5',
-    },
-    {
-        img: '/image/welcome.jpg',
-        title: 'pic6',
-    },
-    {
-        img: '/image/welcome.jpg',
-        title: 'pic7',
-    }
-]
 
 const Welcome = () => {
   return (
     <section>
         <div className="grid grid-cols-1 sm:grid-cols-12">
-            <div className="col-span-6 text-black sm:text-left">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold mb-8">Welcome to my Photo Gallery !!!</h1>
+            <div className="col-span-7 text-black sm:text-left px-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold mb-15">Welcome to my Photo Gallery !!!</h1>
+                <a
+                    href="https://github.com/Jacky72"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 mr-20 lg:ml-20"
+                    style={{
+                        backgroundImage: `url("/image/Github.jpg")`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat"
+                    }}
+                />
+                <a
+                    href="https://www.linkedin.com/in/zhenqi-zhang-680897283"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300"
+                    style={{
+                        backgroundImage: `url("/image/Linkedin.png")`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat"
+                    }}
+                />
+            </div>
+            <div className="col-span-5 text-black place-self-center mt-8 lg:mt-5 py-3">
                 <p className="text-lg lg:text-xl">
                     Hi, my name is Zhang Zhenqi, or you can call me Jacky. This website is a project I use to strengthen my understanding of web development. <br /><br />
-                    At the same time, I also hope to use this website to share with you the beautiful memories recorded during my travels. I hope these photos can show you the beauty of the world and these memories, so as to inspire everyone's interest in exploring, traveling and playing.                </p>
-            </div>
-            <div className="col-span-6 place-self-center mt-8 lg:mt-5">
-                <div className="bg-[#323232] w-[400px] h-[300px] lg:w-[407px] lg:h-[305px] sm:w-[200px] sm:h-[200px] relative"> {/* Container and also background of the Profile Image */}
-                        <Image src="/image/welcome.jpg" alt="pfp" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" width={400} height={300}/> 
-                        {/* Profile Image (Making it rounded and in the center of the background container */}
-                </div>
+                    At the same time, I also hope to use this website to share with you the beautiful memories recorded during my travels. I hope these photos can show you the beauty of the world and these memories, so as to inspire everyone's interest in exploring, traveling and playing.                
+                </p>
             </div>
         </div>
         <div className="w-full h-px bg-black mt-15" />
         <div className="w-full h-px bg-black mt-1 mb-15" />
-        <Box className="w-full h-auto" sx={{ overflowY: 'scroll' }}>
-            <ImageList variant="masonry" cols={3} gap={8}>
-                {pictureData.map((picture) => (
-                    <ImageListItem key={picture.img}>
-                        <img
-                            srcSet={`${picture.img}`}
-                            src={`${picture.img}`}
-                            alt={picture.title}
-                            loading="lazy"
-                        />
-                    </ImageListItem>
-                ))}
-            </ImageList>
-        </Box>
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+            <div className="col-span-7 text-black sm:text-left px-4 lg:mr-5">
+                <Image src={'/image/welcome.jpg'} width={800} height={600} alt="Welcome Section image"/>  
+            </div>
+            <div className="col-span-5 text-black place-self-center">
+                <h2 className="text-4xl font-bold text-black text-center mb-7 mt-8 lg:mt-0 underline">Photos</h2>
+                <p className="lg:text-lg px-5">
+                    When traveling, we always encounter amazing scenery. Taking photos can help us preserve these moments. When we look back at them later, it's like returning to that place again and feeling the shock and joy at that time.<br /><br />
+                    Although some people think that we should feel with our eyes instead of cameras, I agree with this point of view. But at the same time, I also want to share this beauty with my family and friends so that they can also feel my experience. In this way, we can recall those unforgettable moments together.
+                </p>
+                <button>Photos</button>
+            </div>
+        </div>
+        <div className="w-full h-px bg-black mt-15" />
+        <div className="w-full h-px bg-black mt-1 mb-15" />
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+            <div className="col-span-5 text-black place-self-center lg:ml-10">
+                <h2 className="text-4xl font-bold text-black text-center mb-7 mt-8 lg:mt-0 underline">Videos</h2>
+                <p className="lg:text-lg px-5">
+                    I like to add some sports to my travels. Hiking and skiing are my hobbies, and videos can capture these energetic moments. 
+                    Every time I watch it, I can relive the excitement and happiness at that time. 
+                    Videos not only record my adventures, but also let my family and friends feel the passion and excitement together.
+                </p>
+                <button className='block mx-auto mt-4'>Videos</button>
+            </div>
+            <div className="col-span-7 text-black sm:text-left px-4 lg:px-0 lg:ml-5">
+                <video className="w-90 h-auto object-cover lg:mx-auto" src="/video/welcomevid.mp4" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div className="w-full h-px bg-black mt-15" />
+        <div className="w-full h-px bg-black mt-1 mb-10" />
+        <footer className="py-4 mb-5">
+            <div className="container mx-auto">
+                <p className="text-center text-black font-bold">Hope you have a wonderful time visiting this Web Page</p>
+            </div>
+        </footer>
     </section>
   )
 }
