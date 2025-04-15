@@ -6,10 +6,10 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
 const navLinks = [
-    { title: "About", path: "#about"},
-    { title: "Pictures", path: "#picture"},
-    { title: "Video", path: "#video"},
-    { title: "Contact", path: "#contact"}
+    { title: "Welcome", path: "/"},
+    { title: "Pictures", path: "/photo"},
+    { title: "Video", path: "/video"},
+    { title: "Contact", path: "/contact"}
 ]
 
 const Navbar = () => {
@@ -61,9 +61,11 @@ const Navbar = () => {
                 </div>
                 <div className="menu hidden md:block md:w-auto" id="navbar">
                     <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 font-bold">
-                        <li>About</li>
-                        <li>Picture</li>
-                        <li>Video</li>
+                        {navLinks.map(link => (
+                            <Link href={link.path} key={link.title} className="text-black underline px-4">
+                                {link.title}
+                            </Link>
+                        ))}
                     </ul>
                 </div>
             </div>
