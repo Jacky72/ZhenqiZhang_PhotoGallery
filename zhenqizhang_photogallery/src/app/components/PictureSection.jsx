@@ -63,7 +63,7 @@ const PictureSection = () => {
               <PhotoCards
                 key={photo.id}
                 title={photo.title}
-                description={photo.description}
+                description={photo.description !== "" ? photo.description : "This guy is too lazy to leave a description for this photo."}
                 imgUrl={photo.image}
                 gitUrl={photo.gitUrl}
               />
