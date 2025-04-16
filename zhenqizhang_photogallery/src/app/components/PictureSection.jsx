@@ -2,7 +2,8 @@
 import React, { useState, useRef  } from 'react'
 import Tags from './Tags';
 import PhotoCards from './PhotoCards';
-import pictureData from './PictureData';
+import folderData from './data/FolderData';
+import Link from 'next/link'
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const PictureSection = () => {
@@ -15,8 +16,8 @@ const PictureSection = () => {
     setTag(newTag);
   };
 
-  const filteredPhotos = pictureData.filter((photo) =>
-    photo.tag.includes(tag)
+  const filteredFolders = folderData.filter((folder) =>
+    folder.tag.includes(tag)
   );
 
   const cardVariants = {
@@ -51,25 +52,26 @@ const PictureSection = () => {
         </div>
         <ul key={tag} ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 mb-15">
           <AnimatePresence>
-            {filteredPhotos.map((photo, index) => (
-              <motion.li
-                key={index}
-                variants={cardVariants}
-                initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 0.3, delay: index * 0.4 }}
-                className="border-1 border-[#999999]"
-              >
-                <h5 className="text-black text-xl font-bold underline underline-offset-2 py-2 px-3 mt-2 mb-4">{photo.title}</h5>
-                <PhotoCards
-                  key={photo.id}
-                  title={photo.title}
-                  description={photo.description !== "" ? photo.description : "This guy is too lazy to leave a description for this photo."}
-                  imgUrl={photo.image}
-                  gitUrl={photo.gitUrl}
-                />
-                <div className="mb-5"></div>
-              </motion.li>
+            {filteredFolders.map((folder, index) => (
+              <Link key={folder.id} href={`/photo/${folder.location}`}>
+                <motion.li
+                  key={folder.id}
+                  variants={cardVariants}
+                  initial="initial"
+                  animate={isInView ? "animate" : "initial"}
+                  transition={{ duration: 0.3, delay: index * 0.4 }}
+                  className="border-1 border-[#999999]"
+                >
+                  <h5 className="text-black text-xl font-bold underline underline-offset-2 py-2 px-3 mt-2 mb-4">{folder.title}</h5>
+                  <PhotoCards
+                    key={folder.id}
+                    title={folder.title}
+                    description={folder.description !== "" ? folder.description : "This guy is too lazy to leave a description for this photo."}
+                    imgUrl={folder.backgroundImage}
+                  />
+                  <div className="mb-5"></div>
+                </motion.li>
+              </Link>
             ))}
           </AnimatePresence>
         </ul>
