@@ -47,7 +47,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed mx-auto border-2 border-black top-0 left-0 right-0 z-10 bg-[#b9b3b3] bg-opacity-100 min-h-55px max-h-60px transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}> {/* Common NavBar Height = 60 to 100px bg-[#96affc]*/} 
+        <nav className={`fixed mx-auto border-2 border-black top-0 left-0 right-0 z-10 bg-gradient-to-r from-[#ffffff] via-[#c9f7ff] to-[#fef4cb] bg-opacity-100 min-h-55px max-h-60px transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}> {/* Common NavBar Height = 60 to 100px bg-[#96affc]*/} 
             <div className="text-black flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <Link href={"/"} className="text-2xl md:text-5xl font-semibold"> My Portfolio</Link>
                 <div className="mobile-menu block md:hidden">  {/* Hide the NavBar for small screens */}

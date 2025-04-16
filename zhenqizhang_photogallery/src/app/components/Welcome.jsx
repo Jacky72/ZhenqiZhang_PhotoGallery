@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from "next/image";
 
 const Welcome = () => {
@@ -46,27 +47,35 @@ const Welcome = () => {
                 <Image src={'/image/welcome.jpg'} width={800} height={600} alt="Welcome Section image"/>  
             </div>
             <div className="col-span-5 text-black place-self-center">
-                <h2 className="text-4xl font-bold text-black text-center mb-7 mt-8 lg:mt-0 underline">Photos</h2>
-                <p className="lg:text-lg px-5">
+                <h2 className="text-4xl font-bold text-black text-center mb-10 mt-8 lg:mt-0 underline">Photos</h2>
+                <p className="lg:text-lg px-5 mb-10">
                     When traveling, we always encounter amazing scenery. Taking photos can help us preserve these moments. When we look back at them later, it's like returning to that place again and feeling the shock and joy at that time.<br /><br />
                     Although some people think that we should feel with our eyes instead of cameras, I agree with this point of view. But at the same time, I also want to share this beauty with my family and friends so that they can also feel my experience. In this way, we can recall those unforgettable moments together.
                 </p>
-                <button>Photos</button>
+                <div className="flex justify-center">
+                    <Link href={"/photo"} key={"Pictures"} className="text-black border-2 border-black rounded-full px-4 py-2 justify-center">
+                        {"Pictures"}
+                    </Link>
+                </div>
             </div>
         </div>
-        <div className="w-full h-px bg-black mt-15" />
+        <div className="w-full h-px bg-black mt-13" />
         <div className="w-full h-px bg-black mt-1 mb-15" />
         <div className="grid grid-cols-1 sm:grid-cols-12">
             <div className="col-span-5 text-black place-self-center lg:ml-10">
-                <h2 className="text-4xl font-bold text-black text-center mb-7 mt-8 lg:mt-0 underline">Videos</h2>
-                <p className="lg:text-lg px-5">
+                <h2 className="text-4xl font-bold text-black text-center mb-10 underline">Videos</h2>
+                <p className="lg:text-lg px-5 mb-10">
                     I like to add some sports to my travels. Hiking and skiing are my hobbies, and videos can capture these energetic moments. 
                     Every time I watch it, I can relive the excitement and happiness at that time. 
                     Videos not only record my adventures, but also let my family and friends feel the passion and excitement together.
                 </p>
-                <button className='block mx-auto mt-4'>Videos</button>
+                <div className="flex justify-center">
+                    <Link href={"/video"} key={"Video"} className="text-black border-2 border-black rounded-full px-4 py-2 justify-center">
+                        {"Videos"}
+                    </Link>
+                </div>
             </div>
-            <div className="col-span-7 text-black sm:text-left px-4 lg:px-0 lg:ml-5">
+            <div className="col-span-7 text-black sm:text-left px-4 lg:px-0 lg:ml-5 mt-10 lg:mt-0">
                 <video className="w-90 h-auto object-cover lg:mx-auto" src="/video/welcomevid.mp4" controls>
                     Your browser does not support the video tag.
                 </video>
