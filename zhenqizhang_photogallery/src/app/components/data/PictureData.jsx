@@ -22,14 +22,14 @@ export const PictureData = {
         ]
     },
 
-    tiananmensquare: {
-        description: "Just wandered around Tiananmen Square. It is huge and packed with history — definitely a must-see if you are in Beijing.",
+    shanghaicity: {
+        description: "",
         images: [
-            "/image/Beijing/TiananmenSquare/Pic01.jpg",
-            "/image/Beijing/TiananmenSquare/Pic02.jpg",
-            "/image/Beijing/TiananmenSquare/Pic03.jpg",
-            "/image/Beijing/TiananmenSquare/Pic04.jpg",
-            "/image/Beijing/TiananmenSquare/Pic05.jpg"
+            "/image/Shanghai/CityRoad/Pic01.jpg",
+            "/image/Shanghai/CityRoad/Pic02.jpg",
+            "/image/Shanghai/CityRoad/Pic03.jpg",
+            "/image/Shanghai/CityRoad/Pic04.jpg",
+            "/image/Shanghai/CityRoad/Pic05.jpg"
         ]
     }
 }

@@ -19,7 +19,8 @@ const FolderImages = () => {
         mingzhutower: "Shanghai Mingzhu Tower",
         greatwall: "Beijing Great Wall of China",
         tiananmensquare: "Beijing Tiananmen Square",
-        nationalstadium: "Beijing National Stadium"
+        nationalstadium: "Beijing National Stadium",
+        shanghaicity: "Shanghai City Walk"
     };
 
     const handlePrev = () => {
@@ -59,7 +60,7 @@ const FolderImages = () => {
                 <div className="p-6 md:w-1/3 rounded-lg text-black text-lg leading-relaxed">
                     <div className="shadow ring-1 ring-slate-300 px-4 py-4">
                         <h2 className="text-1xl lg:text-3xl font-semibold mb-4 text-center underline">About this location</h2>
-                        <p className="text-lg">{description}</p>
+                        <p className="text-lg">{description !== "" ? description : "This guy is too lazy to leave a description for this folder."}</p>
                     </div>
                 </div>
             </div>

@@ -65,7 +65,6 @@ const PictureSection = () => {
                 <PhotoCards
                   key={folder.id}
                   title={folder.title}
-                  description={folder.description !== "" ? folder.description : "This guy is too lazy to leave a description for this photo."}
                   imgUrl={folder.backgroundImage}
                 />
                 <div className="mb-5"></div>
