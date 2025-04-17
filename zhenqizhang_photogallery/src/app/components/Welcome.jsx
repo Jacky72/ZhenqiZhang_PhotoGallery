@@ -12,7 +12,7 @@ const Welcome = () => {
                     href="https://github.com/Jacky72"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 mr-20 lg:ml-20"
+                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 mr-20 lg:ml-20 p-1 border border-white shadow"
                     style={{
                         backgroundImage: `url("/image/Github.jpg")`,
                         backgroundSize: "cover",
@@ -24,7 +24,7 @@ const Welcome = () => {
                     href="https://www.linkedin.com/in/zhenqi-zhang-680897283"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300"
+                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 p-1 border border-white shadow"
                     style={{
                         backgroundImage: `url("/image/Linkedin.png")`,
                         backgroundSize: "cover",
@@ -44,7 +44,7 @@ const Welcome = () => {
         <div className="w-full h-px bg-black mt-1 mb-15" />
         <div className="grid grid-cols-1 sm:grid-cols-12">
             <div className="col-span-7 text-black sm:text-left px-4 lg:mr-5">
-                <Image src={'/image/welcome.jpg'} width={800} height={600} alt="Welcome Section image"/>  
+                <Image src={'/image/welcome.jpg'} width={800} height={600} alt="Welcome Section image" className='p-1 border bg-white border-white shadow'/>  
             </div>
             <div className="col-span-5 text-black place-self-center">
                 <h2 className="text-4xl font-bold text-black text-center mb-10 mt-8 lg:mt-0 underline">Photos</h2>
@@ -76,7 +76,7 @@ const Welcome = () => {
                 </div>
             </div>
             <div className="col-span-7 text-black sm:text-left px-4 lg:px-0 lg:ml-5 mt-10 lg:mt-0">
-                <video className="w-90 h-auto object-cover lg:mx-auto" src="/video/welcomevid.mp4" controls>
+                <video className="w-90 h-auto object-cover lg:mx-auto p-1 border bg-white border-white shadow" src="/video/welcomevid.mp4" controls>
                     Your browser does not support the video tag.
                 </video>
             </div>

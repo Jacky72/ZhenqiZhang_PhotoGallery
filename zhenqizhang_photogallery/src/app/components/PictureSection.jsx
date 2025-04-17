@@ -27,7 +27,7 @@ const PictureSection = () => {
 
   return (
     <section id='picture'>
-        <h1 className="text-black text-center font-bold text-3xl sm:text-4xl lg:text-5xl lg:leading-normal mb-8">Picture</h1>
+        <h1 className="text-black text-center font-bold text-3xl sm:text-4xl lg:text-5xl lg:leading-normal mb-5">Picture</h1>
         <div className="text-black flex flex-row justify-center item-center gap-2 py-6 mb-6">
           <Tags
             onClick={handleTagChange}
@@ -60,7 +60,6 @@ const PictureSection = () => {
                   initial="initial"
                   animate={isInView ? "animate" : "initial"}
                   transition={{ duration: 0.3, delay: index * 0.4 }}
-                  className="border-1 border-[#999999]"
                 >
                   <h5 className="text-black text-xl font-bold underline underline-offset-2 py-2 px-3 mt-2 mb-4">{folder.title}</h5>
                   <PhotoCards
