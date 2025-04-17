@@ -28,7 +28,8 @@ export const PictureData = {
             "/image/Beijing/TiananmenSquare/Pic01.jpg",
             "/image/Beijing/TiananmenSquare/Pic02.jpg",
             "/image/Beijing/TiananmenSquare/Pic03.jpg",
-            "/image/Beijing/TiananmenSquare/Pic04.jpg"
+            "/image/Beijing/TiananmenSquare/Pic04.jpg",
+            "/image/Beijing/TiananmenSquare/Pic05.jpg"
         ]
     },
 
@@ -39,7 +40,8 @@ export const PictureData = {
             "/image/Shanghai/CityRoad/Pic02.jpg",
             "/image/Shanghai/CityRoad/Pic03.jpg",
             "/image/Shanghai/CityRoad/Pic04.jpg",
-            "/image/Shanghai/CityRoad/Pic05.jpg"
+            "/image/Shanghai/CityRoad/Pic05.jpg",
+            "/image/Shanghai/CityRoad/Pic06.jpg",
         ]
     }
 }
