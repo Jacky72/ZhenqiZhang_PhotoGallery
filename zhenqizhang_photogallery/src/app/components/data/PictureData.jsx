@@ -22,8 +22,18 @@ export const PictureData = {
         ]
     },
 
+    tiananmensquare: {
+        description: "Just wandered around Tiananmen Square. It’s huge and packed with history. Definitely a must-see if you’re in Beijing.",
+        images: [
+            "/image/Beijing/TiananmenSquare/Pic01.jpg",
+            "/image/Beijing/TiananmenSquare/Pic02.jpg",
+            "/image/Beijing/TiananmenSquare/Pic03.jpg",
+            "/image/Beijing/TiananmenSquare/Pic04.jpg"
+        ]
+    },
+
     shanghaicity: {
-        description: "",
+        description: "Took a walk around the streets of Shanghai. Chill vibes, cool buildings, and a bunch of little spots that made the city feel super alive.",
         images: [
             "/image/Shanghai/CityRoad/Pic01.jpg",
             "/image/Shanghai/CityRoad/Pic02.jpg",
