@@ -8,30 +8,32 @@ const Welcome = () => {
         <div className="grid grid-cols-1 sm:grid-cols-12">
             <div className="col-span-7 text-black sm:text-left px-6">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold mb-15">Welcome to my Photo Gallery !!!</h1>
-                <a
-                    href="https://github.com/Jacky72"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 mr-20 lg:ml-20 p-1 border border-white shadow"
-                    style={{
-                        backgroundImage: `url("/image/Github.jpg")`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat"
-                    }}
-                />
-                <a
-                    href="https://www.linkedin.com/in/zhenqi-zhang-680897283"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 p-1 border border-white shadow"
-                    style={{
-                        backgroundImage: `url("/image/Linkedin.png")`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat"
-                    }}
-                />
+                <div className="flex justify-center gap-25 lg:gap-50 mt-10">
+                    <a
+                        href="https://github.com/Jacky72"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 p-1 border border-white shadow"
+                        style={{
+                            backgroundImage: `url("/image/Github.jpg")`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat"
+                        }}
+                    />
+                    <a
+                        href="https://www.linkedin.com/in/zhenqi-zhang-680897283"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-15 h-15 bg-white text-black rounded-full hover:bg-purple-300 transition duration-300 p-1 border border-white shadow"
+                        style={{
+                            backgroundImage: `url("/image/Linkedin.png")`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat"
+                        }}
+                    />
+                </div>
             </div>
             <div className="col-span-5 text-black place-self-center mt-8 lg:mt-5 py-3">
                 <p className="text-lg lg:text-xl">

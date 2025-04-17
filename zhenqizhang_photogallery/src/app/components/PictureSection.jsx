@@ -61,7 +61,7 @@ const PictureSection = () => {
                   animate={isInView ? "animate" : "initial"}
                   transition={{ duration: 0.3, delay: index * 0.4 }}
                 >
-                  <h5 className="text-black text-xl font-bold underline underline-offset-2 py-2 px-3 mt-2 mb-4">{folder.title}</h5>
+                  <h5 className="text-black text-xl font-bold text-center underline underline-offset-2 py-2 px-3 mt-2 mb-4">{folder.title}</h5>
                   <PhotoCards
                     key={folder.id}
                     title={folder.title}

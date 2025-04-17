@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import NavMenu from './NavMenu';
+import NavLink from './NavLink';
 
 const navLinks = [
     { title: "Welcome", path: "/"},
@@ -53,9 +55,9 @@ const Navbar = () => {
                 <div className="mobile-menu block md:hidden">  {/* Hide the NavBar for small screens */}
                 {
                     !navbarOpen ? (
-                    <button onClick={() => setNavbarOpen(true)} className="flex item-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"><MenuIcon className="h-5 w-5"/></button>
+                    <button onClick={() => setNavbarOpen(true)} className="flex item-center px-3 py-2 border rounded border-black text-black hover:text-slate-800 hover:border-slate-800"><MenuIcon className="h-5 w-5"/></button>
                     ) : (
-                    <button onClick={() => setNavbarOpen(false)} className="flex item-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"><CloseIcon className="h-5 w-5"/></button>
+                    <button onClick={() => setNavbarOpen(false)} className="flex item-center px-3 py-2 border rounded border-black text-black hover:text-slate-800 hover:border-slate-800"><CloseIcon className="h-5 w-5"/></button>
                     )
                 }
                 </div>
@@ -69,6 +71,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
+            {navbarOpen ? <NavMenu links={navLinks}/> : null}
         </nav>
     )
 }
