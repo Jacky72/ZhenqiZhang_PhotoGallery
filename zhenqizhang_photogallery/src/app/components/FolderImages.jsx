@@ -32,12 +32,6 @@ const FolderImages = () => {
         setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
-    const handlePreviewPrev = () => {
-        if (previewStart > 0) {
-            setPreviewStart(previewStart - 1);
-        }
-    };
-
     return (
         <section>
             <h1 className="text-4xl sm:text-5xl text-black font-extrabold text-center mb-12 px-6 tracking-tight capitalize">{locationTitles[location.toLowerCase()] || location}</h1>
@@ -45,7 +39,6 @@ const FolderImages = () => {
                 <div className="relative w-full md:w-2/3 items-center justify-center gap-2 shadow-2xl ring-2 ring-slate-300">
 
                     <div className="relative flex items-center justify-center gap-2 overflow-hidden mt-8 mb-10">
-                        <ArrowBackIosIcon className="z-10 text-black" onClick={handlePreviewPrev}></ArrowBackIosIcon>
                         <div className="flex gap-2 overflow-x-auto">
                             {images.slice(previewStart, previewStart + 5).map((src, idx) => (
                                 <img
@@ -58,7 +51,6 @@ const FolderImages = () => {
                                 />
                             ))}
                         </div>
-                        <ArrowForwardIosIcon className="z-10 text-black" onClick={handlePreviewPrev}></ArrowForwardIosIcon>
                     </div>
 
                     <div className="relative flex  items-center justify-center gap-2 overflow-hidden">
