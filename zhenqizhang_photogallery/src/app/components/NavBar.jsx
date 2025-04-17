@@ -25,7 +25,7 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > prevScrollY){
+        if (latest > prevScrollY && latest > 35){
             setShowNavBar(false)
         } else {
             setShowNavBar(true)
