@@ -57,7 +57,7 @@ const FolderImages = () => {
                     
                     <div className="relative flex items-center justify-center gap-2 overflow-hidden mt-8 mb-10">
                         <ArrowBackIosIcon className="z-10 text-black" onClick={handlePrev}></ArrowBackIosIcon>
-                        <div className="flex gap-2 overflow-x-auto">
+                        <div className="flex gap-2 overflow-x-auto px-1">
                             {images.slice(previewStart, previewStart + prevDisplay).map((src, idx) => (
                                 <img
                                     key={idx}
