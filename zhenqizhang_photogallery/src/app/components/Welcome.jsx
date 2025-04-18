@@ -6,9 +6,9 @@ const Welcome = () => {
   return (
     <section>
         <div className="grid grid-cols-1 sm:grid-cols-12">
-            <div className="col-span-7 text-black sm:text-left px-6">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold mb-15">Welcome to my Photo Gallery !!!</h1>
-                <div className="flex justify-center gap-25 lg:gap-50 mt-10">
+            <div className="col-span-7 text-black sm:text-left px-5">
+                <h1 className="text-3xl lg:text-4xl lg:leading-normal font-extrabold mb-15">Welcome to my Photo Gallery !!!</h1>
+                <div className="flex justify-center gap-25 lg:gap-50 mt-8">
                     <a
                         href="https://github.com/Jacky72"
                         target="_blank"
@@ -34,6 +34,11 @@ const Welcome = () => {
                         }}
                     />
                 </div>
+                <p className="text-xl lg:text-xl font-bold underline underline-offset-2 lg:leading-normal mt-15">Feel free to contact me via:</p>
+                <ul className="grid md:grid-cols-2 gap-8 md:gap-12 mt-5 font-bold">
+                    <li>Email: zhenqizhang2002@gmail.com</li>
+                    <li>Discord: Beii (Tag: _beii)</li>
+                </ul>
             </div>
             <div className="col-span-5 text-black place-self-center mt-8 lg:mt-5 py-3">
                 <p className="text-lg lg:text-xl">

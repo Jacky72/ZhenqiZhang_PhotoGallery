@@ -1,4 +1,3 @@
-"use client"
 import FolderImages from '@/app/components/FolderImages'
 import React from 'react'
 

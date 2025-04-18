@@ -11,7 +11,6 @@ const navLinks = [
     { title: "Welcome", path: "/"},
     { title: "Pictures", path: "/photo"},
     { title: "Video", path: "/video"},
-    { title: "Contact", path: "/contact"}
 ]
 
 const Navbar = () => {

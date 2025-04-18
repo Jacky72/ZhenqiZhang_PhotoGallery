@@ -42,7 +42,7 @@ const VideoSection = () => {
             isSelected={tag === "Xiamen"}
           />
         </div>
-        <ul key={tag} className="grid md:grid-cols-3 gap-8 md:gap-12 mb-15">
+        <ul key={tag} className="grid md:grid-cols-3 gap-8 md:gap-12 mb-15 items-center justify-center">
           <AnimatePresence>
             {filteredVideos.map((video, index) => (
                 <motion.li
